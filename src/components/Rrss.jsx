@@ -15,9 +15,15 @@ export default function RRSSIcons() {
     ];
     return( <Box sx={{ display: 'flex', justifyContent: 'left', width: '100%', mt: 2 }}>
     
-        {rrss_items.map((item) => { return<IconButton color="primary">
-                                            {item.icon} 
-                                        </IconButton>
+        {rrss_items.map((item,key) => {
+                 return (<IconButton
+                    component='a'
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    color="primary">
+                        {item.icon} 
+                    </IconButton>)
         })}
 
 
