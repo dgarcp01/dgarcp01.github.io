@@ -15,8 +15,6 @@ export default function Blog() {
 
           </Box>
   
-    <UnderlineChip />
-    <UnderlineButton />
       
       </Container>
 }
