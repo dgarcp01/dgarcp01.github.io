@@ -1,3 +1,14 @@
+import { Box, Toolbar, Typography, Container } from "@mui/material";
 export default function Blog() {
-  return <h2>Blog</h2>;
+  return <Container maxWidth="md">
+          <Box sx={{ my: 4 }}>
+              <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold' }}>
+                Blog
+              </Typography>
+  
+          </Box>
+  
+          
+      
+      </Container>
 }

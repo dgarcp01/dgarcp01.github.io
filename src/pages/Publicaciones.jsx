@@ -1,3 +1,15 @@
+import { Box, Toolbar, Typography, Container } from "@mui/material";
 export default function Publicaciones() {
-  return <h2>Sección Publicaciones</h2>;
+  return   <Container maxWidth="md">
+        <Box sx={{ my: 4 }}>
+            <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold' }}>
+              Publications
+            </Typography>
+    
+        </Box>
+
+        
+    
+    </Container>
+
 }

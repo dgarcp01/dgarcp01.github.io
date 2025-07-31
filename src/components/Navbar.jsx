@@ -6,7 +6,8 @@ import {
   IconButton,
   Drawer,
   Box,
-  Chip,
+    Chip,
+  Container
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useLocation } from "react-router-dom";
@@ -26,15 +27,17 @@ export default function Navbar() {
 
     return (
       
-    <AppBar position="static">
-      <Toolbar>
+        <AppBar color="transparent" elevation={ 0} position="static">
+            <Toolbar >
 
-
+        <Container maxWidth="md">
         {/* Chips desktop */}
         <Box
           sx={{
-            display: { xs: "none", sm: "flex" },
-            gap: 1,
+                display: { xs: "none", sm: "flex" },
+                my: 2,
+                justifyContent:"left",
+                gap: 1,
           }}
         >
           {pages.map((page) => (
@@ -48,7 +51,8 @@ export default function Navbar() {
               variant={isActive(page.path) ? "filled" : "outlined"}
             />
           ))}
-        </Box>
+            </Box>
+            </Container>
 
         {/* Menú hamburguesa en mobile */}
         <IconButton
