@@ -1,0 +1,88 @@
+import { useState } from "react";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  IconButton,
+  Drawer,
+  Box,
+  Chip,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import { Link, useLocation } from "react-router-dom";
+
+const pages = [
+  { label: "Blog", path: "/blog" },
+  { label: "Proyectos", path: "/proyectos" },
+  { label: "Publicaciones", path: "/publicaciones" },
+];
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
+
+    return (
+      
+    <AppBar position="static">
+      <Toolbar>
+
+
+        {/* Chips desktop */}
+        <Box
+          sx={{
+            display: { xs: "none", sm: "flex" },
+            gap: 1,
+          }}
+        >
+          {pages.map((page) => (
+            <Chip
+              key={page.path}
+              label={page.label}
+              component={Link}
+              to={page.path}
+              clickable
+              color={isActive(page.path) ? "primary" : "secondary"}
+              variant={isActive(page.path) ? "filled" : "outlined"}
+            />
+          ))}
+        </Box>
+
+        {/* Menú hamburguesa en mobile */}
+        <IconButton
+          color="inherit"
+          onClick={() => setOpen(true)}
+          sx={{ display: { xs: "flex", sm: "none" } }}
+        >
+          <MenuIcon />
+        </IconButton>
+
+        <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
+          <Box
+            sx={{
+              width: 220,
+              p: 2,
+              display: "flex",
+              flexDirection: "column",
+              gap: 1,
+            }}
+          >
+            {pages.map((page) => (
+              <Chip
+                key={page.path}
+                label={page.label}
+                component={Link}
+                to={page.path}
+                clickable
+                color={isActive(page.path) ? "primary" : "secondary"}
+                variant={isActive(page.path) ? "filled" : "outlined"}
+                onClick={() => setOpen(false)}
+              />
+            ))}
+          </Box>
+        </Drawer>
+      </Toolbar>
+    </AppBar>
+  );
+}
