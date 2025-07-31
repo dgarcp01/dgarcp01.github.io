@@ -12,9 +12,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useLocation } from "react-router-dom";
 
 const pages = [
-  { label: "Blog", path: "/blog" },
-  { label: "Proyectos", path: "/proyectos" },
-  { label: "Publicaciones", path: "/publicaciones" },
+  { label: "Home", path: "/" },
+  { label: "Posts", path: "/blog" },
+  { label: "Projects", path: "/proyectos" },
+  { label: "Publications", path: "/publicaciones" },
 ];
 
 export default function Navbar() {
