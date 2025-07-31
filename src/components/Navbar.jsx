@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useLocation } from "react-router-dom";
+import UnderlineButton from "./UnderLineButton";
 
 const pages = [
   { label: "Home", path: "/" },
@@ -34,31 +35,29 @@ export default function Navbar() {
         {/* Chips desktop */}
         <Box
           sx={{
-                display: { xs: "none", sm: "flex" },
+                display: { xs:"flex",sm: "flex", lg: "flex" },
                 my: 2,
                 justifyContent:"left",
                 gap: 1,
           }}
         >
           {pages.map((page) => (
-            <Chip
-              key={page.path}
+            <UnderlineButton
+              key = {page.path}
               label={page.label}
-              component={Link}
+              isActive={isActive(page.path)}
               to={page.path}
-              clickable
-              color={isActive(page.path) ? "primary" : "secondary"}
-              variant={isActive(page.path) ? "filled" : "outlined"}
+              
             />
           ))}
             </Box>
             </Container>
 
         {/* Menú hamburguesa en mobile */}
-        <IconButton
+        {/* <IconButton
           color="inherit"
           onClick={() => setOpen(true)}
-          sx={{ display: { xs: "flex", sm: "none" } }}
+          sx={{ display: { sm: "flex", lg: "none" } }}
         >
           <MenuIcon />
         </IconButton>
@@ -86,7 +85,7 @@ export default function Navbar() {
               />
             ))}
           </Box>
-        </Drawer>
+        </Drawer> */}
       </Toolbar>
     </AppBar>
   );

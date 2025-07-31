@@ -2,6 +2,7 @@ import { Box, Toolbar, Avatar,Typography, Container, Divider } from "@mui/materi
 import RRSSIcons from "../components/rrss"
 
 
+
 export default function Landing() {
     return <Container maxWidth="md" sx={{display:'flex'}}>
         <Divider/>
@@ -16,7 +17,7 @@ export default function Landing() {
             </Typography>
             <RRSSIcons/>
         </Box>
-        <Box sx={{ ml: 15, display:{ xs: "none", sm: "flex" }}}>
+        <Box sx={{ ml: 15, display:{ xs:"none", sm: "none", lg: "flex" }}}>
             <Avatar
                 alt="Diego García Pérez"
                 src="/avatar.jpeg"
@@ -24,9 +25,10 @@ export default function Landing() {
             />
 
         </Box>
-
-        
     
+               
+        
+
     </Container>
     
     

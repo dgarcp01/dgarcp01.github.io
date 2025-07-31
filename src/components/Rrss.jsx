@@ -8,7 +8,7 @@ import SchoolIcon from '@mui/icons-material/School';
 
 export default function RRSSIcons() {
     const rrss_items = [{ "icon": <GitHubIcon />, "url": "https://github.com/dgarcp01" },
-        { "icon": <LinkedInIcon />, "url": "https://www.linkedin.com/feed/" },
+        { "icon": <LinkedInIcon />, "url": "https://www.linkedin.com/in/diego-garcia-perez-/" },
         { "icon": <SchoolIcon />, "url": "https://portalinvestigacion.uniovi.es/investigadores/217440/detalle" },
                         
         
