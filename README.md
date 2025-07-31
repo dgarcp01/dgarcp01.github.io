@@ -90,7 +90,8 @@ Realizar el push al repositorio.
 Ejecutar:
 
 ```bash
-npm deploy
+npm run build
+npm run deploy
 ```
 
 Configurar en github:
