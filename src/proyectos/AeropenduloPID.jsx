@@ -215,7 +215,7 @@ export default function AeropenduloPID() {
 
 
 
-    return <Container maxWidth="ld">
+    return <Container maxWidth="lg">
         <Box sx={{ my: 4 }}>
             <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
                 Aeropendulum Simulator
@@ -230,10 +230,10 @@ export default function AeropenduloPID() {
                       
                 {/* Configuración de la entrada */}
                 <Grid size={4}>
-                  <Card sx={{backgroundColor:"#2f2d2dff"}}>
+                  <Card sx={{my:15,backgroundColor:"#2f2d2dff"}}>
                     <CardContent>
                       <Stack>
-                        <Typography variant="h5" gutterBottom> Entrada  </Typography>
+                                    <Typography variant="h5" gutterBottom sx={{fontWeight: 'bold'}}> Entrada  </Typography>
                         <InputSlider title={"Frecuencia"} min={0} max={1} initVal={F.current} step={0.01} units={"Hz"} cllback={cllback_F} />
                         <InputSlider title={"Amplitud"} min={-60} max={60} initVal={A.current} step={3} units={"º"} cllback={cllback_A} />
                         <Divider />
@@ -248,10 +248,10 @@ export default function AeropenduloPID() {
 
                 {/* Configuración de la regulador */}
                 <Grid size={3}>
-                  <Card sx={{backgroundColor:"#2f2d2dff"}}>
+                  <Card sx={{my:15, backgroundColor:"#2f2d2dff"}}>
                     <CardContent>
                       <Stack>
-                        <Typography variant="h5" gutterBottom> Regulador PID </Typography>
+                        <Typography variant="h5" gutterBottom sx={{fontWeight: 'bold'}}> PID compensator </Typography>
                         <InputSlider title={"Kp"} min={0} max={10} initVal={Kp.current} step={0.3} units={""} cllback={cllback_kp} />
                         <InputSlider title={"Ki"} min={0} max={1} initVal={Ki.current} step={0.05} units={""} cllback={cllback_ki} /> 
                         <InputSlider title={"Kd"} min={0} max={0.9} initVal={Ki.current} step={0.0005} units={""} cllback={cllback_kd} />

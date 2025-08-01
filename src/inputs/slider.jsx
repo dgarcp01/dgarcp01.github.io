@@ -55,7 +55,7 @@ export default function InputSlider({ title, min, max, step, initVal, units,cllb
         <Grid size={6}>
           <Slider
                       value={typeof value === 'number' ? value : Number(value)}
-                      
+            sx={{ display: {xs:"none",md:"block",ld:"block"} }}       
             onChange={handleSliderChange}
             aria-labelledby="input-slider"
             min={min}
