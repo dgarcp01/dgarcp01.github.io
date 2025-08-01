@@ -43,7 +43,7 @@ export default function VirtyRemLab() {
         </AccordionSummary>
               <AccordionDetails  >
                   <Box maxWidth="md">
-                      <UnderlineButton label="Aeropendulum PID" /> <OpenInNewIcon sx={{my:-0.5}} fontSize="3" />
+                      <UnderlineButton label="Aeropendulum PID" key='/virtyremlab/aeropenduloPID' to='/virtyremlab/aeropenduloPID' /> <OpenInNewIcon sx={{my:-0.5}} fontSize="3" />
                 </Box>
                   
         </AccordionDetails>

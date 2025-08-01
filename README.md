@@ -5,7 +5,7 @@ Para la creación de esta página se utiliza Reac + Vite + material-ui. Para ini
 ```bash
 npm create vite@latest . --template react
 npm install
-npm install @mui/material @emotion/react @emotion/styled react-router-dom @mui/material-icons
+npm install @mui/material @emotion/react @emotion/styled react-router-dom @mui/material-icons mathjs echarts-for-react
 
 ```
 
