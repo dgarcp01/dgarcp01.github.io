@@ -8,7 +8,7 @@ export default function Blog() {
   
   return <Container maxWidth="md">
           <Box sx={{ my: 4 }}>
-              <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold' }}>
+              <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
                 Blog
               </Typography>
         

@@ -15,7 +15,7 @@ const theme = extendTheme({
       main: '#e1e7ef', // Texto principal
     },
     secondary: {
-      main: '#e1e7ef', // Texto secundario
+      main: '#c0bdbdff', // Texto secundario
     },
     background: {
       default: '#191a1f',   // Fondo primario
@@ -23,7 +23,7 @@ const theme = extendTheme({
     },
     text: {
       primary: '#e1e7ef',   // Texto principal
-      secondary: '#e1e7ef', // Texto secundario
+      secondary: '#c0bdbdff', // Texto secundario
       disabled: '#a0aec0',  // Texto sutil
     },
     info: {

@@ -12,7 +12,7 @@ export default function Landing() {
               Diego García Pérez
             </Typography>
             
-            <Typography variant="h7" color = "#9c9898ff" gutterBottom sx={{ fontWeight: 'bold' }}>
+            <Typography variant="h7" color = "text.secondary" gutterBottom sx={{ fontWeight: 'bold' }}>
               Assistant Professor at University of Oviedo
             </Typography>
             <RRSSIcons/>
