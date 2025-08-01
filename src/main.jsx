@@ -9,6 +9,15 @@ import { BrowserRouter } from 'react-router-dom'
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
+
+const params = new URLSearchParams(window.location.search);
+const redirect = params.get('redirect');
+
+if (redirect) {
+  window.history.replaceState(null, '', redirect); // restaura la URL original
+}
+
+
 import theme from './theme'; // importa tu theme
 
 root.render(

@@ -2,6 +2,12 @@
 <html>
   <head>
     <meta http-equiv="refresh" content="0; url=/" />
+    <script type="text/javascript">
+      // Guarda la ruta original
+      var redirect = window.location.pathname + window.location.search + window.location.hash;
+      // Redirige al index.html con la ruta como parámetro
+      window.location.replace('/?redirect=' + encodeURIComponent(redirect));
+    </script>
   </head>
   <body></body>
 </html>
